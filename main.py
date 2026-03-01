@@ -1092,7 +1092,7 @@ if __name__ == "__main__":
     print("📌 Priority Discrepancies:", PRIORITY_DISCREPANCIES[:3])
     demo.launch(
         server_name="0.0.0.0",
-        server_port=7860,
+        server_port=int(os.environ.get("PORT", 7860)),
         share=False,
         show_error=True,
         theme=gr.themes.Soft()  # FIX: Moved theme to launch() for Gradio 6.0
