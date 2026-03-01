@@ -1,2 +1,9 @@
 [phases.setup]
-aptPkgs = ["ffmpeg"]
+nixPkgs = ["python310"]
+aptPkgs = ["build-essential", "poppler-utils"]
+
+[phases.install]
+cmds = ["pip install -r requirements.txt"]
+
+[start]
+cmd = "python Qwen_python_20260301_zi1z37pfc.py"
